@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/mui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+	<div id="app">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">标题</h1>
+		</header>
+		<div class="name">
+			<img :src="site" >
+			<h6>类型 {{ type }}</h6>
+   			 <h6>姓名 {{ name }}</h6>
+   			 
+   			 </div>
+	</div>
+  
+    <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+    <script type="text/javascript">
+    	
+    mui.init()
+    
+    
+     var vm = new Vue({
+  	el: '#app',
+  	data: {
+  		// info: {}
+      type: '',
+      name: '',
+      site:''
+  	}
+  })
+  
+  mui.plusReady(function() {
+    // console.log("当前页面URL："+plus.webview.currentWebview().getURL());
+    // 详情页面怎么样获取 list 页面中传递过来的 info 的数据
+    
+    // 1. 得到当前 webview 对象
+    
+      var type = plus.webview.currentWebview().infoType;
+      var name = plus.webview.currentWebview().infoName;
+       var site = plus.webview.currentWebview().infoSite;
+       
+      
+//     
+       console.log(type);
+        console.log(site);
+       console.log(name);
+    vm.type = type;
+    vm.name = name;
+    vm.site = site
+    
+    
+    mui('.mui-content').on('tap', '#btn', function() {
+      // 直接调用mui.back 也是关闭的操作
+      mui.back();
+    })
+  })
+  
+  
+    </script>
+    
+  
+</body>
+</html>

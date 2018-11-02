@@ -1,0 +1,17 @@
+{
+	"index.html": {
+		"resources": [
+			"detill.html"
+		],
+		"refer": [
+			"detill.html",
+			"footer.html",
+			"detills.html"
+		]
+	},
+	"detills.html": {
+		"refer": [
+			"detill.html"
+		]
+	}
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/mui.css"/>
+  
+</head>
+<body>
+	
+	<div id="app">
+	  <ul class="mui-table-view">
+    	<li class="mui-table-view-cell mui-media"
+        v-for="(item, index) in list"
+        :key="index"
+        :type="item.type"
+        :name="item.realName"
+        :site="item.avatarUrl">
+       
+        <img class="mui-media-object mui-pull-left" :src="item.avatarUrl">
+        <div class="mui-media-body">
+          {{ item.city }}
+          <p class="mui-ellipsis">{{ item.realName }}</p>
+        </div>
+    	</li>
+    </ul>
+		
+		
+	</div>
+	
+	
+	
+	
+	
+	 <div id="slider" class="mui-slider" >
+      <div class="mui-slider-group mui-slider-loop">
+        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+        <div class="mui-slider-item mui-slider-item-duplicate">
+          <a href="#">
+            <img src="img/pic4.jpg>
+          </a>
+        </div>
+        <!-- 第一张 -->
+        <div class="mui-slider-item">
+          <a href="#">
+            <img src="img/pic1.jpg>
+          </a>
+        </div>
+        <!-- 第二张 -->
+        <div class="mui-slider-item">
+          <a href="#">
+            <img src="img/pic2.jpg">
+          </a>
+        </div>
+        <!-- 第三张 -->
+        <div class="mui-slider-item">
+          <a href="#">
+            <img src="img/pic3.jpg">
+          </a>
+        </div>
+        <!-- 第四张 -->
+        <div class="mui-slider-item">
+          <a href="#">
+            <img src="img/pic4.jpg">
+          </a>
+        </div>
+        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+        <div class="mui-slider-item mui-slider-item-duplicate">
+          <a href="#">
+            <img src="img/pic1.jpg">
+          </a>
+        </div>
+      </div>
+      <div class="mui-slider-indicator">
+        <div class="mui-indicator mui-active"></div>
+        <div class="mui-indicator"></div>
+        <div class="mui-indicator"></div>
+        <div class="mui-indicator"></div>
+      </div>
+    </div>
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+   
+    <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+    <script src="js/list.js" type="text/javascript"></script>
+   
+    <script type="text/javascript">
+  
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+     
+    </script>
+ 
+<body>
+	
+	  <header class="mui-bar mui-bar-nav">
+	      <h1 class="mui-title">标题</h1>
+	  </header>
+
+	  <script type="text/javascript">
+	  	mui.init({
+			subpages: [{
+					url: 'detills.html', // 地址
+					id: 'detills.html', // 标示, 后面可以通过 plus .webview 来控制
+
+					styles: {
+						top: '50px',
+						botton: '0px'
+						
+					}
+			},
+				{
+					url: 'footer.html', // 地址
+					id: 'footer.html', // 标示, 后面可以通过 plus .webview 来控制
+
+					styles: {
+						 top: '850px',
+						bottom: '0px',
+					}
+				}]
+			});
+
+		mui('#btn').button('loading');
+    </script>
+</head>
+</body>
+
+</html>
